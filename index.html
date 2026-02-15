@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code for Beginners</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="logo">&#9672;</span> Claude Code for Beginners
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#welcome">Home</a></li>
+            <li><a href="#lessons">Lessons</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="welcome" class="hero">
+        <div class="hero-content">
+            <h1>Learn Claude Code</h1>
+            <p class="hero-subtitle">A step-by-step guide for complete beginners on Windows</p>
+            <p class="hero-description">No coding experience needed. We'll walk you through everything from opening your command line to having AI build things for you.</p>
+            <a href="#lesson-0" class="btn btn-primary">Start Learning</a>
+        </div>
+        <div class="hero-graphic">
+            <div class="terminal-preview">
+                <div class="terminal-bar">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">Command Prompt</span>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="prompt">&gt;</span> claude</p>
+                    <p class="output">Welcome to Claude Code! How can I help you today?</p>
+                    <p><span class="prompt">&gt;</span> <span class="typing">make me a website about cats</span><span class="cursor">|</span></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- What is Claude Code -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2>What is Claude Code?</h2>
+            <p class="section-intro">Claude Code is a tool that lets you talk to an AI assistant right from your computer's command line. You type what you want in plain English, and Claude helps you build it.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">&#128172;</div>
+                    <h3>Talk in Plain English</h3>
+                    <p>No coding language to learn. Just describe what you want, like talking to a helpful friend.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">&#9997;&#65039;</div>
+                    <h3>AI Writes the Code</h3>
+                    <p>Claude writes, edits, and fixes code for you. It can build websites, scripts, and more.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">&#128640;</div>
+                    <h3>Build Real Things</h3>
+                    <p>Create websites, automate tasks, and solve problems — all without prior experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Roadmap -->
+    <section id="lessons" class="section">
+        <div class="container">
+            <h2>Your Learning Path</h2>
+            <p class="section-intro">Follow these lessons in order. Each one builds on the last. Take your time!</p>
+
+            <!-- Lesson 0 -->
+            <div id="lesson-0" class="lesson">
+                <div class="lesson-header" onclick="toggleLesson(this)">
+                    <span class="lesson-number">Lesson 0</span>
+                    <h3>Getting Your Bearings: What is a Command Line?</h3>
+                    <span class="lesson-toggle">+</span>
+                </div>
+                <div class="lesson-content">
+                    <div class="lesson-goal">
+                        <strong>Goal:</strong> Understand what the command line is and why we use it.
+                    </div>
+
+                    <h4>What is the Command Line?</h4>
+                    <p>You normally use your computer by clicking on icons, menus, and buttons. That's called a <strong>graphical interface</strong>.</p>
+                    <p>The <strong>command line</strong> (also called the <strong>terminal</strong>) is a different way to talk to your computer. Instead of clicking, you <em>type</em> instructions. It looks like a black window with text in it.</p>
+                    <p>Think of it like this:</p>
+                    <ul>
+                        <li><strong>Graphical interface</strong> = pointing at a menu item in a restaurant</li>
+                        <li><strong>Command line</strong> = writing your order on a note to the kitchen</li>
+                    </ul>
+                    <p>Both get the job done! The command line just gives you more control.</p>
+
+                    <h4>Why Do We Need It?</h4>
+                    <p>Claude Code runs inside the command line. It's like a chat window where you talk to the AI. You won't need to memorize a bunch of commands &mdash; just enough to get Claude started, and then Claude does the hard work!</p>
+
+                    <div class="tip-box">
+                        <strong>Don't worry!</strong> The command line can look intimidating at first, but you'll only need a handful of simple commands. And once Claude is running, you just type in plain English.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson 1 -->
+            <div id="lesson-1" class="lesson">
+                <div class="lesson-header" onclick="toggleLesson(this)">
+                    <span class="lesson-number">Lesson 1</span>
+                    <h3>Opening the Command Line on Windows</h3>
+                    <span class="lesson-toggle">+</span>
+                </div>
+                <div class="lesson-content">
+                    <div class="lesson-goal">
+                        <strong>Goal:</strong> Open a terminal (command line) window on your Windows computer.
+                    </div>
+
+                    <p>Windows has a few different command line programs. We'll use <strong>PowerShell</strong> &mdash; it comes pre-installed on every modern Windows computer.</p>
+
+                    <h4>Steps to Open PowerShell</h4>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <p>Press the <kbd>Windows</kbd> key on your keyboard (it has the Windows logo on it, usually near the bottom-left).</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <p>Type <code>powershell</code> &mdash; you'll see it appear in the search results.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <p>Click on <strong>"Windows PowerShell"</strong> (the blue icon). <em>Don't</em> pick "Run as administrator" for now.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <p>A blue/black window will open with some text. You'll see something like:</p>
+                            <div class="code-block">
+                                <code>PS C:\Users\YourName&gt;</code>
+                            </div>
+                            <p>This is your command line! The blinking cursor is where you type.</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <strong>Tip:</strong> You can also right-click the Start button (Windows icon at the bottom-left) and choose <strong>"Terminal"</strong> or <strong>"Windows PowerShell"</strong> from the menu.
+                    </div>
+
+                    <h4>Try It Out!</h4>
+                    <p>Type this and press <kbd>Enter</kbd>:</p>
+                    <div class="code-block">
+                        <code>echo "Hello, I'm using the command line!"</code>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <p>You should see your message printed back to you. Congrats &mdash; you just ran your first command!</p>
+
+                    <h4>Useful Things to Know</h4>
+                    <table class="info-table">
+                        <tr>
+                            <th>To do this...</th>
+                            <th>Type this</th>
+                        </tr>
+                        <tr>
+                            <td>See what folder you're in</td>
+                            <td><code>pwd</code></td>
+                        </tr>
+                        <tr>
+                            <td>List files in the current folder</td>
+                            <td><code>ls</code></td>
+                        </tr>
+                        <tr>
+                            <td>Go into a folder</td>
+                            <td><code>cd FolderName</code></td>
+                        </tr>
+                        <tr>
+                            <td>Go up one folder</td>
+                            <td><code>cd ..</code></td>
+                        </tr>
+                        <tr>
+                            <td>Clear the screen</td>
+                            <td><code>cls</code></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Lesson 2 -->
+            <div id="lesson-2" class="lesson">
+                <div class="lesson-header" onclick="toggleLesson(this)">
+                    <span class="lesson-number">Lesson 2</span>
+                    <h3>Installing Claude Code</h3>
+                    <span class="lesson-toggle">+</span>
+                </div>
+                <div class="lesson-content">
+                    <div class="lesson-goal">
+                        <strong>Goal:</strong> Install Claude Code on your Windows computer using the official installer.
+                    </div>
+
+                    <p>Installing Claude Code on Windows is easy &mdash; it's a single command that downloads and sets everything up for you. No extra software needed!</p>
+
+                    <h4>Steps</h4>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <p>Open PowerShell (press <kbd>Windows</kbd> key, type <code>powershell</code>, click it).</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <p>Copy and paste this command, then press <kbd>Enter</kbd>:</p>
+                            <div class="code-block">
+                                <code>irm https://claude.ai/install.ps1 | iex</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                            <p><strong>What this means:</strong></p>
+                            <ul>
+                                <li><code>irm</code> = "Invoke-RestMethod" &mdash; downloads a file from the internet</li>
+                                <li><code>https://claude.ai/install.ps1</code> = the official Claude Code installer script</li>
+                                <li><code>| iex</code> = runs the downloaded script to install Claude Code</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <p>Wait for it to finish. You'll see some text as it installs &mdash; that's normal!</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <p><strong>Close</strong> your PowerShell window and <strong>open a new one</strong> (this is important so PowerShell knows about the new installation).</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <p>Verify it worked by typing:</p>
+                            <div class="code-block">
+                                <code>claude --version</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                            <p>You should see a version number. If you do &mdash; Claude Code is installed!</p>
+                        </div>
+                    </div>
+
+                    <h4>Alternative: Install with WinGet</h4>
+                    <p>If the above method doesn't work, you can also install using WinGet (Windows' built-in package manager):</p>
+                    <div class="code-block">
+                        <code>winget install Anthropic.ClaudeCode</code>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+
+                    <div class="tip-box">
+                        <strong>Auto-updates:</strong> The native installer (the first method) automatically keeps Claude Code up to date in the background. No need to manually update!
+                    </div>
+
+                    <div class="warning-box">
+                        <strong>If you see an error:</strong> Make sure you <em>closed and reopened</em> PowerShell after installing. If it still doesn't work, try restarting your computer and running the install command again.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson 3 -->
+            <div id="lesson-3" class="lesson">
+                <div class="lesson-header" onclick="toggleLesson(this)">
+                    <span class="lesson-number">Lesson 3</span>
+                    <h3>Setting Up Your Anthropic Account & API Key</h3>
+                    <span class="lesson-toggle">+</span>
+                </div>
+                <div class="lesson-content">
+                    <div class="lesson-goal">
+                        <strong>Goal:</strong> Create an Anthropic account and log in so Claude Code can work.
+                    </div>
+
+                    <p>Claude Code needs to connect to Anthropic's servers (the company that makes Claude). You'll need an account.</p>
+
+                    <h4>Option A: Log In with Your Browser (Easiest)</h4>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <p>In PowerShell, type:</p>
+                            <div class="code-block">
+                                <code>claude</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <p>The first time you run Claude, it will ask you to log in. Choose the option to <strong>log in with your browser</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <p>Your browser will open. Sign up for an Anthropic account (or log in if you have one).</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <p>Approve the connection. The terminal will confirm you're logged in.</p>
+                        </div>
+                    </div>
+
+                    <h4>Option B: Use an API Key</h4>
+                    <p>If someone gave you an API key, or you want to use one from the Anthropic Console:</p>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <p>Go to <strong>console.anthropic.com</strong> in your browser and create an account.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <p>Navigate to <strong>API Keys</strong> and create a new key. Copy it.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <p>In PowerShell, set your key:</p>
+                            <div class="code-block">
+                                <code>$env:ANTHROPIC_API_KEY = "your-key-here"</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                            <p>Replace <code>your-key-here</code> with the key you copied.</p>
+                        </div>
+                    </div>
+
+                    <div class="warning-box">
+                        <strong>Important:</strong> Your API key is like a password &mdash; don't share it with anyone or post it online!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson 4 -->
+            <div id="lesson-4" class="lesson">
+                <div class="lesson-header" onclick="toggleLesson(this)">
+                    <span class="lesson-number">Lesson 4</span>
+                    <h3>Starting Claude Code for the First Time</h3>
+                    <span class="lesson-toggle">+</span>
+                </div>
+                <div class="lesson-content">
+                    <div class="lesson-goal">
+                        <strong>Goal:</strong> Launch Claude Code and have your first conversation with it.
+                    </div>
+
+                    <h4>Create a Project Folder</h4>
+                    <p>Before starting Claude, let's create a folder for your first project. Claude works best when you start it inside a folder for the thing you want to build.</p>
+
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <p>In PowerShell, create a new folder and go into it:</p>
+                            <div class="code-block">
+                                <code>mkdir my-first-project</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                            <div class="code-block">
+                                <code>cd my-first-project</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                            <p><code>mkdir</code> = "make directory" (folder). <code>cd</code> = "change directory" (go into it).</p>
+                        </div>
+                    </div>
+
+                    <h4>Launch Claude</h4>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <p>Type:</p>
+                            <div class="code-block">
+                                <code>claude</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                            <p>You'll see Claude's welcome message and a prompt where you can start typing.</p>
+                        </div>
+                    </div>
+
+                    <h4>Say Hello!</h4>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <p>Try typing something like:</p>
+                            <div class="code-block">
+                                <code>Hi Claude! Can you create a simple HTML file that says "Hello World" with a nice design?</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <p>Claude will write the code and ask your permission to create a file. Type <kbd>y</kbd> (yes) and press <kbd>Enter</kbd> to approve.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <p>Open the file! You can find it in your <code>my-first-project</code> folder using File Explorer.</p>
+                            <p>To quickly open the folder, type this in PowerShell:</p>
+                            <div class="code-block">
+                                <code>explorer .</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                            <p>Then double-click the HTML file to open it in your browser.</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <strong>Congrats!</strong> You just used AI to create your first web page! It's that easy.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson 5 -->
+            <div id="lesson-5" class="lesson">
+                <div class="lesson-header" onclick="toggleLesson(this)">
+                    <span class="lesson-number">Lesson 5</span>
+                    <h3>Understanding How Claude Code Works</h3>
+                    <span class="lesson-toggle">+</span>
+                </div>
+                <div class="lesson-content">
+                    <div class="lesson-goal">
+                        <strong>Goal:</strong> Learn the key concepts of working with Claude Code.
+                    </div>
+
+                    <h4>The Conversation Flow</h4>
+                    <p>Working with Claude Code is like having a conversation:</p>
+                    <ol>
+                        <li><strong>You ask</strong> for something in plain English</li>
+                        <li><strong>Claude thinks</strong> about what to do</li>
+                        <li><strong>Claude asks permission</strong> before making changes (creating files, running commands)</li>
+                        <li><strong>You approve or deny</strong> each action</li>
+                        <li><strong>Repeat</strong> until you're happy with the result</li>
+                    </ol>
+
+                    <h4>Key Things to Know</h4>
+                    <div class="concept-grid">
+                        <div class="concept">
+                            <h5>Approving Actions</h5>
+                            <p>Claude will ask before creating/editing files or running commands. You'll see a prompt asking you to approve:</p>
+                            <ul>
+                                <li><kbd>y</kbd> = Yes, do it</li>
+                                <li><kbd>n</kbd> = No, don't do that</li>
+                            </ul>
+                        </div>
+                        <div class="concept">
+                            <h5>Sending Messages</h5>
+                            <p>Press <kbd>Enter</kbd> to send your message to Claude. If you need multiple lines, press <kbd>Shift</kbd> + <kbd>Enter</kbd> for a new line without sending.</p>
+                        </div>
+                        <div class="concept">
+                            <h5>Stopping Claude</h5>
+                            <p>If Claude is doing something and you want it to stop, press <kbd>Escape</kbd>. To exit Claude completely, type <code>/exit</code> or press <kbd>Ctrl</kbd> + <kbd>C</kbd> twice.</p>
+                        </div>
+                        <div class="concept">
+                            <h5>Starting Fresh</h5>
+                            <p>Type <code>/clear</code> to clear the conversation and start over. This is helpful when switching to a new task.</p>
+                        </div>
+                    </div>
+
+                    <h4>Helpful Slash Commands</h4>
+                    <table class="info-table">
+                        <tr>
+                            <th>Command</th>
+                            <th>What It Does</th>
+                        </tr>
+                        <tr>
+                            <td><code>/help</code></td>
+                            <td>Shows available commands and tips</td>
+                        </tr>
+                        <tr>
+                            <td><code>/clear</code></td>
+                            <td>Clears conversation history, starts fresh</td>
+                        </tr>
+                        <tr>
+                            <td><code>/exit</code></td>
+                            <td>Quits Claude Code</td>
+                        </tr>
+                        <tr>
+                            <td><code>/compact</code></td>
+                            <td>Summarizes the conversation to save memory</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Lesson 6 -->
+            <div id="lesson-6" class="lesson">
+                <div class="lesson-header" onclick="toggleLesson(this)">
+                    <span class="lesson-number">Lesson 6</span>
+                    <h3>Writing Good Prompts (Talking to Claude Effectively)</h3>
+                    <span class="lesson-toggle">+</span>
+                </div>
+                <div class="lesson-content">
+                    <div class="lesson-goal">
+                        <strong>Goal:</strong> Learn how to ask Claude for things in a way that gets the best results.
+                    </div>
+
+                    <p>The better you describe what you want, the better Claude's output will be. Here are some tips:</p>
+
+                    <h4>Be Specific</h4>
+                    <div class="compare-grid">
+                        <div class="compare bad">
+                            <div class="compare-label">Vague</div>
+                            <p>"Make me a website"</p>
+                        </div>
+                        <div class="compare good">
+                            <div class="compare-label">Specific</div>
+                            <p>"Make me a personal portfolio website with a dark theme. Include sections for About Me, My Projects, and Contact Info. Use a modern, clean design."</p>
+                        </div>
+                    </div>
+
+                    <h4>Describe the Look and Feel</h4>
+                    <div class="compare-grid">
+                        <div class="compare bad">
+                            <div class="compare-label">Vague</div>
+                            <p>"Make it look nice"</p>
+                        </div>
+                        <div class="compare good">
+                            <div class="compare-label">Specific</div>
+                            <p>"Use soft pastel colors (light pink and lavender), rounded corners on buttons, and a friendly sans-serif font"</p>
+                        </div>
+                    </div>
+
+                    <h4>Iterate and Refine</h4>
+                    <p>You don't have to get it perfect in one message! Build on what Claude makes:</p>
+                    <div class="conversation-example">
+                        <div class="msg user-msg">
+                            <strong>You:</strong> Create a recipe card for chocolate chip cookies
+                        </div>
+                        <div class="msg claude-msg">
+                            <strong>Claude:</strong> <em>[creates a recipe card]</em>
+                        </div>
+                        <div class="msg user-msg">
+                            <strong>You:</strong> I like it, but can you make the font bigger and add a photo placeholder at the top?
+                        </div>
+                        <div class="msg claude-msg">
+                            <strong>Claude:</strong> <em>[updates the design]</em>
+                        </div>
+                        <div class="msg user-msg">
+                            <strong>You:</strong> Perfect! Now change the background color to a warm cream color.
+                        </div>
+                    </div>
+
+                    <h4>Prompt Templates to Try</h4>
+                    <div class="template-list">
+                        <div class="template">
+                            <p><strong>For websites:</strong></p>
+                            <div class="code-block">
+                                <code>Create a [type] website about [topic]. Use [colors/style]. Include sections for [section 1], [section 2], and [section 3]. Make it mobile-friendly.</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                        </div>
+                        <div class="template">
+                            <p><strong>For fixing something:</strong></p>
+                            <div class="code-block">
+                                <code>The [thing] isn't working right. When I [do this], it should [expected behavior], but instead it [actual behavior]. Can you fix it?</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                        </div>
+                        <div class="template">
+                            <p><strong>For changes:</strong></p>
+                            <div class="code-block">
+                                <code>In the [filename] file, change [specific thing] to [what you want instead].</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson 7 -->
+            <div id="lesson-7" class="lesson">
+                <div class="lesson-header" onclick="toggleLesson(this)">
+                    <span class="lesson-number">Lesson 7</span>
+                    <h3>Your First Real Project: Build a Personal Website</h3>
+                    <span class="lesson-toggle">+</span>
+                </div>
+                <div class="lesson-content">
+                    <div class="lesson-goal">
+                        <strong>Goal:</strong> Use Claude to build a complete personal website from scratch.
+                    </div>
+
+                    <p>Let's put everything together and build something real! Follow along step by step.</p>
+
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <p>Open PowerShell and create a new project folder:</p>
+                            <div class="code-block">
+                                <code>mkdir my-website</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                            <div class="code-block">
+                                <code>cd my-website</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <p>Start Claude:</p>
+                            <div class="code-block">
+                                <code>claude</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <p>Give Claude your first prompt. Customize this to make it about YOU:</p>
+                            <div class="code-block">
+                                <code>Create a personal website for me. My name is [Your Name]. I enjoy [your hobbies]. Use a warm, friendly design with a light background. Include: 1) A hero section with a greeting, 2) An "About Me" section, 3) A "My Interests" section with cards for each hobby, 4) A footer with a fun quote. Make it modern and mobile-friendly.</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <p>Approve the files Claude creates (press <kbd>y</kbd> when asked).</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <p>Open your website in a browser:</p>
+                            <div class="code-block">
+                                <code>explorer index.html</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <p>Now refine it! Go back to Claude and ask for changes:</p>
+                            <ul>
+                                <li>"Change the color scheme to [colors you like]"</li>
+                                <li>"Add a photo placeholder in the About Me section"</li>
+                                <li>"Make the hobby cards have rounded corners and shadows"</li>
+                                <li>"Add an animation when the page loads"</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <strong>Keep going!</strong> The more you ask Claude to refine, the more personalized your site becomes. There's no limit to what you can ask for!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson 8 -->
+            <div id="lesson-8" class="lesson">
+                <div class="lesson-header" onclick="toggleLesson(this)">
+                    <span class="lesson-number">Lesson 8</span>
+                    <h3>Fun Projects to Try Next</h3>
+                    <span class="lesson-toggle">+</span>
+                </div>
+                <div class="lesson-content">
+                    <div class="lesson-goal">
+                        <strong>Goal:</strong> Get inspired with project ideas you can build with Claude Code.
+                    </div>
+
+                    <p>Now that you know the basics, here are some fun things to try! For each one, just create a new folder, start Claude, and describe what you want.</p>
+
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <div class="project-icon">&#127828;</div>
+                            <h5>Recipe Collection</h5>
+                            <p>A beautiful website to store and display your favorite recipes. Ask for categories, search, and pretty food-themed styling.</p>
+                            <div class="code-block small">
+                                <code>Build me a recipe collection website. Include categories like Breakfast, Lunch, Dinner, and Desserts. Add 3 sample recipes with ingredients and steps. Make it look like a cozy cookbook.</code>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-icon">&#128197;</div>
+                            <h5>Birthday Tracker</h5>
+                            <p>Never forget a birthday again! A simple app to track birthdays and see upcoming ones.</p>
+                            <div class="code-block small">
+                                <code>Create a birthday tracker app. I should be able to add names and birthdays, and see a list of upcoming birthdays sorted by date. Use a fun party theme with confetti colors.</code>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-icon">&#128221;</div>
+                            <h5>Digital Journal</h5>
+                            <p>A private, pretty place to write daily thoughts and memories.</p>
+                            <div class="code-block small">
+                                <code>Create a digital journal website where I can write daily entries. Include a date for each entry, a calming lavender color scheme, and a nice serif font. Save entries in the browser's local storage.</code>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-icon">&#127924;</div>
+                            <h5>Trivia Quiz Game</h5>
+                            <p>A fun interactive quiz on any topic you love!</p>
+                            <div class="code-block small">
+                                <code>Build a trivia quiz game about [your favorite topic]. Include 10 multiple-choice questions, a score tracker, and a results screen at the end. Make it colorful and fun with animations for correct/wrong answers.</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson 9 -->
+            <div id="lesson-9" class="lesson">
+                <div class="lesson-header" onclick="toggleLesson(this)">
+                    <span class="lesson-number">Lesson 9</span>
+                    <h3>Tips, Tricks & Troubleshooting</h3>
+                    <span class="lesson-toggle">+</span>
+                </div>
+                <div class="lesson-content">
+                    <div class="lesson-goal">
+                        <strong>Goal:</strong> Quick reference for common issues and helpful tricks.
+                    </div>
+
+                    <h4>Common Issues & Fixes</h4>
+                    <div class="troubleshoot">
+                        <details>
+                            <summary>"claude" is not recognized as a command</summary>
+                            <p><strong>Fix:</strong> Close PowerShell and reopen it. If that doesn't work, reinstall Claude Code:</p>
+                            <div class="code-block">
+                                <code>irm https://claude.ai/install.ps1 | iex</code>
+                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                            <p>Then close and reopen PowerShell again.</p>
+                        </details>
+                        <details>
+                            <summary>Permission errors when installing</summary>
+                            <p><strong>Fix:</strong> Open PowerShell as Administrator: press <kbd>Windows</kbd>, type "powershell", right-click it, and choose "Run as administrator."</p>
+                        </details>
+                        <details>
+                            <summary>Claude seems stuck or frozen</summary>
+                            <p><strong>Fix:</strong> Press <kbd>Escape</kbd> to interrupt. If that doesn't work, press <kbd>Ctrl</kbd> + <kbd>C</kbd> twice to force quit, then start Claude again.</p>
+                        </details>
+                        <details>
+                            <summary>My website doesn't look right</summary>
+                            <p><strong>Fix:</strong> Tell Claude what's wrong! Be specific: "The header text is too small" or "The colors don't match what I asked for." Claude can see and fix its own work.</p>
+                        </details>
+                        <details>
+                            <summary>Claude made a mistake or I want to undo</summary>
+                            <p><strong>Fix:</strong> Just tell Claude: "Undo the last change" or "Go back to how it was before." You can also press <kbd>Ctrl</kbd> + <kbd>Z</kbd> in most text editors.</p>
+                        </details>
+                    </div>
+
+                    <h4>Power User Tips</h4>
+                    <ul class="tips-list">
+                        <li>You can drag and drop images into Claude's conversation to show it what you want something to look like.</li>
+                        <li>If Claude's response is too long, type <code>/compact</code> to have it summarize the conversation.</li>
+                        <li>Start each new project in its own folder to keep things organized.</li>
+                        <li>If you want Claude to keep a certain style across sessions, create a file called <code>CLAUDE.md</code> in your project folder with your preferences.</li>
+                        <li>You can copy-paste error messages directly to Claude and ask it to fix them.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-alt">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Is Claude Code free?</summary>
+                    <p>Claude Code requires an Anthropic account. There may be a free tier or trial available. Check the Anthropic website for current pricing. The Max plan ($100/month for Claude Pro with Claude Code included) or the API with pay-per-use are the most common options.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Do I need to know how to code?</summary>
+                    <p>Nope! That's the beauty of Claude Code. You describe what you want in plain English, and Claude writes the code. Over time, you'll naturally start to pick up some coding concepts, but it's not required.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is it safe? Can Claude break my computer?</summary>
+                    <p>Claude always asks for your permission before making changes. It can't do anything without your approval. If you're unsure about something Claude wants to do, just say no! You can also ask Claude to explain what a command does before approving it.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What can I build with Claude Code?</summary>
+                    <p>Websites, simple apps, scripts to automate tasks, data analysis, games, and more. If you can describe it, Claude can probably help build it!</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What if I mess something up?</summary>
+                    <p>Don't worry! You can always tell Claude to undo changes. Working in separate project folders keeps things isolated. And you can always delete a folder and start over &mdash; nothing is permanent.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Made with Claude Code &mdash; Built for beginners, by someone who cares about you learning.</p>
+            <p class="footer-sub">You've got this! One step at a time.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
